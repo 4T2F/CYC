@@ -75,16 +75,17 @@ class LoginModel: ObservableObject {
     
     // 코드값을 토대로 액세스 토큰을 얻기위한 함수
     func get_access_token() async {
+        guard let unwrappedCode = code else { print("error", #function); return  }
         let params = ["client_id": client_id,
                       "client_secret": client_secret,
-                      "code": code]
-        
+                      "code": unwrappedCode]
         let headers: HTTPHeaders = ["Accept": "application/json"]
         
         do {
             let response = try await AF.request("https://github.com/login/oauth/access_token",
                                       method: .post, parameters: params,
                                       headers: headers).serializingDecodable([String: String].self).value
+            print(response)
             if let token = response["access_token"]{
                 self.access_token = token
                 print(self.access_token!)
@@ -94,7 +95,6 @@ class LoginModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
-    
     
     // 유저정보를 받아오기 위한 함수
     func getUser() async {
@@ -114,7 +114,6 @@ class LoginModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
-    
     
     func getCommitData() {
         if let url = URL(string: "http://github.com/users/\(self.userLogin!)/contributions") {

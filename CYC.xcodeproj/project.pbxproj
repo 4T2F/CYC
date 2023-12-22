@@ -18,7 +18,7 @@
 		047F35A52B21A4C900574504 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F35A22B21A4C900574504 /* SettingViewModel.swift */; };
 		04EA90242B26E4FC00DDC99E /* TodoPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA90232B26E4FC00DDC99E /* TodoPreView.swift */; };
 		41CCD5222B3566D100A8DBB4 /* keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CCD5212B3566D100A8DBB4 /* keys.swift */; };
-		41CCD5242B3566DF00A8DBB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 41CCD5232B3566DF00A8DBB4 /* Config.xcconfig */; };
+		41CCD5292B356FB700A8DBB4 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 41CCD5282B356FB700A8DBB4 /* Config.xcconfig */; };
 		5205DD772B2039640013DF68 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205DD762B2039640013DF68 /* ProgressView.swift */; };
 		5215F1A42B25CDB500CE1733 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215F1A32B25CDB500CE1733 /* ModalView.swift */; };
 		5215F1A62B25D30800CE1733 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5215F1A52B25D30800CE1733 /* ProgressBarView.swift */; };
@@ -90,7 +90,7 @@
 		047F35A22B21A4C900574504 /* SettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		04EA90232B26E4FC00DDC99E /* TodoPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoPreView.swift; sourceTree = "<group>"; };
 		41CCD5212B3566D100A8DBB4 /* keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keys.swift; sourceTree = "<group>"; };
-		41CCD5232B3566DF00A8DBB4 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		41CCD5282B356FB700A8DBB4 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		5205DD762B2039640013DF68 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		5215F1A32B25CDB500CE1733 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		5215F1A52B25D30800CE1733 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 				6317B3CA2B2033CD0039795E /* LoginView.swift */,
 				64DE4B9E2B26DECF00AD4995 /* LoginModel.swift */,
 				41CCD5212B3566D100A8DBB4 /* keys.swift */,
-				41CCD5232B3566DF00A8DBB4 /* Config.xcconfig */,
+				41CCD5282B356FB700A8DBB4 /* Config.xcconfig */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -532,7 +532,7 @@
 				B1ABEA5E2B200E0B00F3C44A /* Pretendard-Bold.otf in Resources */,
 				B1ABEA592B200E0B00F3C44A /* Pretendard-Regular.otf in Resources */,
 				B1ABEA602B200E0B00F3C44A /* Pretendard-Light.otf in Resources */,
-				41CCD5242B3566DF00A8DBB4 /* Config.xcconfig in Resources */,
+				41CCD5292B356FB700A8DBB4 /* Config.xcconfig in Resources */,
 				B1ABEA5D2B200E0B00F3C44A /* Pretendard-Thin.otf in Resources */,
 				B1ABEA5F2B200E0B00F3C44A /* Pretendard-Black.otf in Resources */,
 				B1ABEA5C2B200E0B00F3C44A /* Pretendard-ExtraBold.otf in Resources */,
@@ -599,7 +599,7 @@
 /* Begin XCBuildConfiguration section */
 		B1ABEA4A2B200D3200F3C44A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41CCD5232B3566DF00A8DBB4 /* Config.xcconfig */;
+			baseConfigurationReference = 41CCD5282B356FB700A8DBB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -663,6 +663,7 @@
 		};
 		B1ABEA4B2B200D3200F3C44A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CCD5282B356FB700A8DBB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -719,6 +720,7 @@
 		};
 		B1ABEA4D2B200D3200F3C44A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CCD5282B356FB700A8DBB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -727,7 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CYC/Preview Content\"";
-				DEVELOPMENT_TEAM = KKR332Q2BZ;
+				DEVELOPMENT_TEAM = UAG934M4Q7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CYC/Info.plist;
@@ -751,6 +753,7 @@
 		};
 		B1ABEA4E2B200D3200F3C44A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41CCD5282B356FB700A8DBB4 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -759,7 +762,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CYC/Preview Content\"";
-				DEVELOPMENT_TEAM = KKR332Q2BZ;
+				DEVELOPMENT_TEAM = UAG934M4Q7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CYC/Info.plist;

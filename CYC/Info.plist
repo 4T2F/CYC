@@ -14,9 +14,9 @@
 		</dict>
 	</array>
 	<key>CLIENT_ID</key>
-	<string>486d0937e1bdcf1cc187</string>
+	<string>${CLIENT_ID}</string>
 	<key>CLIENT_SECRET</key>
-	<string>ab88ee3e63e2ec140e4896c4f50131637a1b807e</string>
+	<string>${CLIENT_SECRET}</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pretendard-Black.otf</string>
