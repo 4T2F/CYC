@@ -19,28 +19,25 @@ struct LicenseView: View {
             HStack {
                 Image(systemName: "chevron.left") // 화살표 Image
                     .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.base)
+                    .foregroundStyle(.gray)
                     .bold()
             }
         }
     }
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            
-            
-            // MARK: - 해더
-            Text("라이센스")
-                .font(.pretendardBold_25)
-                .padding(.bottom, 5)
-                .padding(.top, -5)
-            Text("터치 시 라이센스 링크로 연결합니다")
-                .font(.pretendardLight_11)
-                .padding(.bottom, 20)
-            
-            // MARK: - 스크롤뷰(라이센스 링크)
-            ScrollView {
+        ZStack {
+            Color.bgColor.ignoresSafeArea(.all)
+            VStack(alignment: .leading) {
+                // MARK: - 해더
+                Text("라이센스")
+                    .font(.pretendardBold_23)
+                    .padding(.bottom, 5)
+                Text("터치 시 라이센스 링크로 연결합니다")
+                    .font(.pretendardLight_11)
+                    .padding(.bottom, 20)
+                
+                // MARK: - 스크롤뷰(라이센스 링크)
                 ForEach(info) { info in
                     
                     Link("\(info.text)", destination: URL(string: "\(info.destination)")!)
@@ -50,12 +47,15 @@ struct LicenseView: View {
                         .foregroundColor(Color.baseColor)
                 }
             }
+            .padding(.horizontal)
+            .padding(.top, 5)
+            .vSpacing(.topLeading)
+            
         }
-        .padding()
-        .background(Color.bgColor)
+        .navigationTitle("라이센스")
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
-        .DismissGesture()
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  DdayButtonView.swift
+//  ModalView.swift
 //  CYC
 //
 //  Created by 이민영 on 2023/12/10.
@@ -12,7 +12,7 @@ struct ModalView: View {
     @ObservedObject var progressModel = ProgressModel.shared
 
     var body: some View {
-        VStack{
+        VStack {
             Picker("Your D-day", selection: $progressModel.goal) {
                 ForEach(1...365, id: \.self) { number in
                     Text("\(number)")
@@ -22,6 +22,7 @@ struct ModalView: View {
             Button {
                 progressModel.showSheet = false
                 moveDinosaur()
+                progressModel.updateGoal(newGoal: progressModel.goal)
             } label: {
                 Text("저장")
                     .font(.pretendardBold_17)
@@ -34,7 +35,7 @@ struct ModalView: View {
     
     // Animation에 대한 함수는 뷰에서만 정의 가능
     func moveDinosaur() {
-        Task{
+        Task {
             for i in 0...loginModel.commitDay {
                 try await Task.sleep(until: .now.advanced(by: .milliseconds(40)), clock: .continuous)
                 withAnimation {

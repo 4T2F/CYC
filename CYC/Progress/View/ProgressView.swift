@@ -10,23 +10,18 @@ import SwiftUI
 struct ProgressView: View {
     @ObservedObject private var loginModel = LoginModel.shared
     @ObservedObject private var progressModel = ProgressModel.shared
-
-    // MARK: 현재 CommitDay까지 가는 progress width 조절
-    var maxProgressWidth: Double {
-        let progressWidth = CGFloat(Double(progressModel.progress) / Double(progressModel.goal)) * progressModel.containerWidth
-        return min(progressWidth, progressModel.containerWidth)
-    }
     
     var body: some View {
-        VStack{
+        VStack {
             ProgressTextView()
-            HStack{
-                ProgressBarView(maxProgressWidth: maxProgressWidth)
+            HStack(alignment: .center) {
+                ProgressBarView()
                     .onAppear {
                         progressModel.progress = loginModel.commitDay
                         ModalView().moveDinosaur()
                     }
-
+                
+                // pink dinosaur button view
                 ZStack(alignment: .top) {
                     Button {
                         progressModel.showSheet.toggle()
@@ -39,7 +34,9 @@ struct ProgressView: View {
                         ModalView()
                     }
                 }
+                .padding(.top, -15)
             }
+            .padding(.horizontal, 5)
         }
         .padding(.top, 20)
         .background(Color.bgColor)

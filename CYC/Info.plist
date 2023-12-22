@@ -13,6 +13,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>CLIENT_ID</key>
+	<string>${CLIENT_ID}</string>
+	<key>CLIENT_SECRET</key>
+	<string>${CLIENT_SECRET}</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pretendard-Black.otf</string>
@@ -27,6 +31,8 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
+		<string>processing</string>
 		<string>remote-notification</string>
 	</array>
 </dict>

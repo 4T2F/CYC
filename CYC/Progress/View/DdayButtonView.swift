@@ -11,15 +11,17 @@ struct DdayButtonView: View {
     @Binding var goal: Int
     
     var body: some View {
-        VStack{
+        VStack {
+            
+            Text("D-\(goal)")
+                .font(.pretendardSemiBold_12)
+                .foregroundStyle(Color.baseColor)
+
             Image(.kissPink)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 40)
             
-            Text("D-\(goal)")
-                .font(.pretendardSemiBold_12)
-                .foregroundStyle(Color.baseColor)
         }
     }
 }
